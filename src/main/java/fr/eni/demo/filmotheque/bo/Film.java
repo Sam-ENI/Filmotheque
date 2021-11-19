@@ -1,12 +1,12 @@
 package fr.eni.demo.filmotheque.bo;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Film {
 	private int filmId;
 	private String titre;
-	private Date anneeDeSortie;
+	private LocalDate anneeDeSortie;
 	private int duree;
 	private ArrayList<Personne> lstActeurs;
 	private Personne realisateur;
@@ -17,7 +17,7 @@ public class Film {
 
 	}
 
-	public Film(String titre, Date anneeDeSortie, int duree, ArrayList<Personne> lstActeurs, Personne realisateur,
+	public Film(String titre, LocalDate anneeDeSortie, int duree, ArrayList<Personne> lstActeurs, Personne realisateur,
 			Genre genre) {
 		super();
 		this.titre = titre;
@@ -28,7 +28,7 @@ public class Film {
 		this.genre = genre;
 	}
 
-	public Film(int filmId, String titre, Date anneeDeSortie, int duree, ArrayList<Personne> lstActeurs,
+	public Film(int filmId, String titre, LocalDate anneeDeSortie, int duree, ArrayList<Personne> lstActeurs,
 			Personne realisateur, Genre genre, ArrayList<Avis> lstAvis) {
 		super();
 		this.filmId = filmId;
@@ -41,7 +41,7 @@ public class Film {
 		this.lstAvis = lstAvis;
 	}
 
-	public Film(String titre, Date anneeDeSortie, int duree, ArrayList<Personne> lstActeurs, Personne realisateur,
+	public Film(String titre, LocalDate anneeDeSortie, int duree, ArrayList<Personne> lstActeurs, Personne realisateur,
 			Genre genre, ArrayList<Avis> lstAvis) {
 		super();
 		this.titre = titre;
@@ -51,6 +51,12 @@ public class Film {
 		this.realisateur = realisateur;
 		this.genre = genre;
 		this.lstAvis = lstAvis;
+	}
+	
+
+	public Film(String titre) {
+		super();
+		this.titre = titre;
 	}
 
 	public int getFilmId() {
@@ -69,11 +75,11 @@ public class Film {
 		this.titre = titre;
 	}
 
-	public Date getAnneeDeSortie() {
+	public LocalDate getAnneeDeSortie() {
 		return anneeDeSortie;
 	}
 
-	public void setAnneeDeSortie(Date anneeDeSortie) {
+	public void setAnneeDeSortie(LocalDate anneeDeSortie) {
 		this.anneeDeSortie = anneeDeSortie;
 	}
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -7,5 +7,10 @@
 <body>
 <h1>Hello World!</h1>
 
+
+
+<p th:text = "${ leBonLaBruteEtLeTruand.titre }"></p>
+<p th:text = "${ leBonLaBruteEtLeTruand.realisateur }"></p>
+<p th:text = "${ film1.duree}"></p>
 </body>
 </html>

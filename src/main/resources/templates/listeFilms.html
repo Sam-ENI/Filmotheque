@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+
+
+<h2 class="h2">Liste des films : </h2>
+<table class="table table-striped">
+	<tr>
+		<th>Titre</th><th>Annee de Sortie</th><th>duree</th><th>lstActeurs</th><th>realistaur</th><th>genre</th>
+	</tr>
+	<tr th:each="film: listeFilms">
+	<td th:text="${film.titre}"></td>
+	<!--  <td th:text="${film.anneeDeSortie}"></td>
+	<td th:text="${film.duree}"></td>
+	<td th:text="${film.lstActeurs}"></td>
+	<td th:text="${film.realisateur}"></td>
+	<td th:text="${film.genre}"></td>-->
+			 	
+	</tr>
+</table>
+
+<a th:href="@{/formulairePersonne}">Retour au formulaire</a>
+
+</div>
+</body>
+</html>
